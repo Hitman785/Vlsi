@@ -1,0 +1,21 @@
+*CMOS FUNCTION IMPLEMENTATION
+ .include "E:\amarta\mosmodel.txt"
+ VDD 11 0 DC 1.8V
+ VA 1 0 PULSE(0 1.8 10n 1n 1n 40U 400U)
+ VB 2 0 PULSE(0 1.8 40n 1n 1n 80U 400U)
+ VC 3 0 PULSE(0 1.8 60n 1n 1n 100U 400U)
+ VD 4 0 PULSE(0 1.8 80n 1n 1n 120U 400U)
+ VE 5 0 PULSE(0 1.8 100n 1n 1n 160U 400U)
+ M1 7 1 6 0 cmosn l=0.18u w=0.72u
+ M2 7 2 6 0 cmosn l=0.18u w=0.72u
+ M3 7 3 6 0 cmosn l=0.18u W=0.72u
+ M4 6 4 0 0 cmosn l=0.18u w=0.72u
+ M5 6 5 0 0 cmosn l=0.18u w=0.72u
+ M6 9 1 11 11 cmosp l=0.18u w=2.16u
+ M7 8 2 9 11 cmosp l=0.18u w=2.16u
+ M8 7 3 8 11 cmosp l=0.18u w=2.16u
+ M9 10 4 11 11 cmosp l=0.18u w=1.44u
+ M10 7 5 10 11 cmosp l=0.18u w=1.44u
+ .TRAN 0U 1800U
+ .PROBE
+ .END
