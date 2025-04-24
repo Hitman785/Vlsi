@@ -1,0 +1,35 @@
+clear;
+
+clc;
+
+lambda=1;
+
+d=lambda/2;
+
+beta=(2*%pi)/lambda;
+
+delta=0;
+
+phi=0:0.01:2*%pi
+
+subplot(2,2,1);
+
+EP=cos(%pi/2*(cos(phi)));
+
+polarplot(phi,abs(EP)); // Element Pattern
+
+title('Element Pattern OR Unit Pattern');
+
+AF=cos(%pi*(cos(phi)+delta));
+
+subplot(2,2,2);
+
+polarplot(phi,abs(AF)); // Group Pattern
+
+title('Array-Factor Pattern OR Group Pattern');
+
+subplot(2,2,3.5);
+
+polarplot(phi,abs(EP).*abs(AF));
+
+title('Resultant Array Pattern
